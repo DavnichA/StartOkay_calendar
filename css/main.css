@@ -1,27 +1,61 @@
-*{
-  margin: 0;
-  padding: 0;
-}
 body{
   background-color:#f0f0f0;
 }
-#calendar{  
-  background-color: #fff;
-  max-width: 900px;
-  margin: 0 auto;  
+/* Таблица календарика */
+.calendar {  
+  border-collapse: collapse;
+  font-family: Arial;
+  font-size: 14px;
+  height: 550px;
+  width: 100%;
+  background-color:#ffffff;
+}
+/* Заголовок */
+.calendar th {
+  text-align: center;
+  width: 36px;
+  height: 36px;  
+  color:#5bc7a9;  
+}
+
+/* Ячейка дня */
+.calendar td {  
+  width: 28px;
+  height: 36px;  
+  border: 1px solid #d0d0d0;  
+  cursor: pointer;
+  vertical-align: top;  
+}
+/* Затемненный день */
+.calendar td.grayed {
+  background: #F5F5F5;
+  cursor: auto !important;
+}
+/* Выбранный день */
+.calendar td.selected {
+  border: 2px solid #1fb38a;
+  z-index: 100;  
+}
+
+/* Кнопки навигации */
+.calendar td.navigation {
+  text-align: center;
+  border: 0px none !important;
+  font-size: 32px;
+  cursor: pointer;
+  white-space: nowrap;
 }
 /*Кнопка добавить задание*/
 .up{
     background-color:#1eb289;
     color: white;
-    padding: 10px 17px;
+    padding: 12px 40px;
     text-align: center;
     text-decoration: none;    
     font-size: 13px;
     border-radius: 8px;
     border: none;
     float: right;
-    margin-right: 224px;
 }
 .up:active{
   background:#45d4ac;
@@ -71,7 +105,7 @@ form{
   background-color:#1eb188;
   color: #fff;
   border: none;
-  width: 113px;
+  width: 125px;
 }
 /*Кнопка удаления*/
 #cancel{
@@ -82,7 +116,7 @@ form{
   background-color:#1eb188;
   color: #fff;
   border: none;
-  width: 62px;
+  width: 74px;
 }
 
 /*Тип задания*/
@@ -102,18 +136,14 @@ form{
   margin-left: 20px;
 }
 
-#event_type{
-  margin-left: 20px;
-  width: 150px;
-  height: 30px;
-}
-#start_event{
+#btn_type{
   margin-left: 20px;
   width: 150px;
   height: 30px;
 }
 
-#calendar .fc-other-month{
-  
-  background-color:#f5f5f5;
+#start_event{
+  margin-left: 20px;
+  width: 150px;
+  height: 30px;
 }

@@ -1,44 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ua">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
-	<link rel="stylesheet" href="css/fullcalendar.css" rel='stylesheet' >		
-	<link rel="stylesheet" href="lib/magnific-popup/magnific-popup.css">
+	<title>Document</title>	
+	<link rel="stylesheet" href="libs/magnific-popup/magnific-popup.css">
+	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/pickmeup.min.css">
 	<link rel="stylesheet" href="css/main.css">
-			
 </head>
 <body>
-    <button class="up" href="#form"><b>+ Додати завдання</b></button><br><br>
-
-	<div id='calendar'></div>
+    <button class="up" href="#form"><b>+ Додати завдання</b></button>
+	<div id="calendar"></div>
 	<div class="hidden">
 	   <form id="form">
-	   	<div id="name">	   		
-	   		<textarea placeholder="Введіть назву завдання" id="task" name="task" value=""></textarea>
+	   	<div id="name">
+	   		
+	   		<textarea placeholder="Введіть назву завдання" id="task" name="name"></textarea>
 	   		<button id="add" >Зберегти завдання</button> 
 	   		<button id="cancel">Скасувати</button>
 	   	</div>
 	   	<div id="type">
-	   		<p>ТИП ЗАВДАННЯ</p><br>
-	   		<select name="type" id="event_type">	   		
-	   			<option value="1">&#9200; Зустріч</option>
+	   		<p>ТИП ЗАВДАННЯ</p>
+	   		<select name="type" id="btn_type">	   		
+	   			<option value="1">&#9200; Зустріч </option>
 	   			<option value="2">&#10004; Подія</option>
-	   			<option value="3">&#9742; Справи</option>		
+	   			<option value="3">&#9742; Справи</option>	   			
 	   		</select>
-	   		<p>ПОЧАТОК</p><br>
+	   		<p>ПОЧАТОК</p>
 	   		<input type="text" name="start_event" id="start_event">
 	   	</div>
 	   </form>		
 	</div>
 
-	<script src="lib/jquery.min.js"></script>
-	<script src="lib/moment.min.js"></script>
-	<script src="js/fullcalendar.min.js"></script>
-	<script src="lib/magnific-popup/jquery.magnific-popup.min.js"></script>
-	<script src="js/jquery.pickmeup.min.js"></script>	
-	<script src="js/main.js"></script>
-	</script>
+	<script src="libs/jquery.min.js"></script>
+	<script src="libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+	<script src="js/jquery.pickmeup.min.js"></script>
+	<script src="js/calendar.js"></script>
+	<script src="js/popup.js"></script>
 </body>
 </html>
